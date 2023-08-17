@@ -6,6 +6,9 @@ public class Note {
     private String date;
     private String note;
 
+    public Note() {
+    }
+
     public Note(int id, String title, String date, String note) {
         this.id = id;
         this.title = title;
