@@ -7,4 +7,76 @@
     android:layout_height="match_parent"
     tools:context=".Display">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <TextView
+      android:id="@+id/txtDisplayTitle"
+      android:layout_width="379dp"
+      android:layout_height="63dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="70dp"
+      android:layout_marginEnd="16dp"
+      android:text="temp Tilesss"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/txtDisplayDate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="5dp"
+      android:text="2000/3/4"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtDisplayTitle" />
+
+  <TextView
+      android:id="@+id/txtDisplayNote"
+      android:layout_width="366dp"
+      android:layout_height="496dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="9dp"
+      android:layout_marginEnd="16dp"
+      android:text="how are you?"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtDisplayDate" />
+
+  <ImageButton
+      android:id="@+id/btnEdintNote"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="340dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:backgroundTint="#FFFFFF"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_edit" />
+
+  <ImageButton
+      android:id="@+id/btnDeleteNote"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:backgroundTint="#FFFFFF"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_delete" />
+
+  <Button
+      android:id="@+id/btnCloseNote"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="153dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="167dp"
+      android:text="Close"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtDisplayNote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
