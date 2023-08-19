@@ -9,14 +9,17 @@
 
   <TextView
       android:id="@+id/txtDisplayTitle"
-      android:layout_width="379dp"
-      android:layout_height="63dp"
+      android:layout_width="378dp"
+      android:layout_height="56dp"
       android:layout_marginStart="16dp"
-      android:layout_marginTop="70dp"
+      android:layout_marginTop="72dp"
       android:layout_marginEnd="16dp"
       android:text="temp Tilesss"
+
       android:textSize="24sp"
+      android:maxLength="20"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,18 +30,21 @@
       android:layout_marginStart="16dp"
       android:layout_marginTop="5dp"
       android:text="2000/3/4"
+      android:maxLength="10"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txtDisplayTitle" />
 
   <TextView
       android:id="@+id/txtDisplayNote"
-      android:layout_width="366dp"
-      android:layout_height="496dp"
+      android:layout_width="381dp"
+      android:layout_height="562dp"
       android:layout_marginStart="16dp"
-      android:layout_marginTop="9dp"
+      android:layout_marginTop="8dp"
       android:layout_marginEnd="16dp"
       android:text="how are you?"
+      android:maxLength="50"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txtDisplayDate" />
 
@@ -53,10 +59,25 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+      app:tint="#00ff00"
       app:srcCompat="@android:drawable/ic_menu_edit" />
 
   <ImageButton
       android:id="@+id/btnDeleteNote"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="205dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      android:backgroundTint="#FFFFFF"
+      app:layout_constraintEnd_toStartOf="@+id/btnEdintNote"
+      app:layout_constraintStart_toEndOf="@+id/btnCloseNote"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@android:drawable/ic_menu_delete"
+      app:tint="#FF0000" />
+
+  <ImageButton
+      android:id="@+id/btnCloseNote"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
@@ -64,19 +85,7 @@
       android:backgroundTint="#FFFFFF"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@android:drawable/ic_menu_delete" />
-
-  <Button
-      android:id="@+id/btnCloseNote"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="153dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="167dp"
-      android:text="Close"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/txtDisplayNote" />
+      app:tint="#FF0000"
+      app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

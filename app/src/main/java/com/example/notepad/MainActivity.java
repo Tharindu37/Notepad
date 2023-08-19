@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
         name=findViewById(R.id.txtName);
@@ -30,42 +32,42 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 name.append("o");
             }
-        },700);
+        },800);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 name.append("t");
             }
-        },900);
+        },1000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 name.append("e");
             }
-        },1100);
+        },1200);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 name.append("P");
             }
-        },1300);
+        },1400);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 name.append("a");
             }
-        },1500);
+        },1600);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 name.append("d");
             }
-        },1700);
+        },1800);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },3500);
     }
 
 }

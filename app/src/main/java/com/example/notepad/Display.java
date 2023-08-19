@@ -18,7 +18,7 @@ public class Display extends AppCompatActivity {
     private TextView description;
     private ImageButton delete;
     private ImageButton edit;
-    private Button close;
+    private ImageButton close;
 
     DbHandler dbHandler;
     @Override
@@ -32,6 +32,7 @@ public class Display extends AppCompatActivity {
         description=findViewById(R.id.txtDisplayNote);
         delete=findViewById(R.id.btnDeleteNote);
         edit=findViewById(R.id.btnEdintNote);
+        close=findViewById(R.id.btnCloseNote);
 
         Intent intent = getIntent();
         if (intent.hasExtra("NOTE_ID")){
@@ -62,5 +63,15 @@ public class Display extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(getApplicationContext(), Notes.class);
+                startActivity(intent1);
+            }
+        });
+
+
     }
 }

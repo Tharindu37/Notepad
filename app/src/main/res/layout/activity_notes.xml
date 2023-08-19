@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:foregroundTint="#781A1A"
     tools:context=".Notes">
 
 
@@ -16,10 +18,12 @@
         android:layout_marginStart="339dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/icons8_add_50"
+        android:src="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintStart_toStartOf="parent"
+        app:backgroundTint="#2196F3"
+        ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <TextView
         android:id="@+id/textView2"
@@ -36,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/txtSearch"
         android:layout_width="382dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
@@ -56,8 +60,9 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="7dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSearch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

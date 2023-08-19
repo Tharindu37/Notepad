@@ -106,4 +106,26 @@ public class DbHandler extends SQLiteOpenHelper {
         database.close();
         return status;
     }
+
+    public List<Note> searchNotesByTitle(String query) {
+        List<Note> notes = new ArrayList<>();
+        SQLiteDatabase database = getReadableDatabase();
+        String sql = "SELECT * FROM note WHERE title LIKE ?";
+
+        Cursor cursor = database.rawQuery(sql, new String[]{"%" + query + "%"});
+        if (cursor.moveToFirst()) {
+            do {
+                Note note = new Note();
+                note.setId(cursor.getInt(0));
+                note.setTitle(cursor.getString(1));
+                note.setDate(cursor.getString(2));
+                note.setNote(cursor.getString(3));
+
+                notes.add(note);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return notes;
+    }
+
 }

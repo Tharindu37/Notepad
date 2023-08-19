@@ -24,15 +24,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:backgroundTint="#FFFFFF"
                 app:srcCompat="@drawable/icons8_file_64" />
 
             <TextView
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:text="my note"
                 android:textAlignment="center"
-                android:textSize="16sp" />
+                android:maxLength="10"
+                android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
