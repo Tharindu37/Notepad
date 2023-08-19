@@ -59,6 +59,7 @@ public class Edit extends AppCompatActivity {
                     dbHandler.saveNote(noteObj);
                     Intent intent=new Intent(getApplicationContext(), Notes.class);
                     startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
                 }
             });
         }else if (save.getText().toString().equalsIgnoreCase("Update")){
@@ -74,6 +75,7 @@ public class Edit extends AppCompatActivity {
                     int status=dbHandler.updateNote(noteObj);
                     Intent intent=new Intent(getApplicationContext(), Notes.class);
                     startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_LONG).show();
                 }
             });
         }

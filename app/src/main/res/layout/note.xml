@@ -30,10 +30,12 @@
             <TextView
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:maxLength="20"
                 android:text="my note"
                 android:textAlignment="center"
-                android:maxLength="10"
                 android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
